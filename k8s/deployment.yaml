@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exemplok8s
+spec:
+  selector:
+    matchLabels:
+      app: exemplok8s
+  template:
+    metadata:
+      labels:
+        app: exemplok8s
+    spec:
+      containers:
+        - name: exemplok8s
+          image: exemplok8s:1.0.0
+          ports:
+            - containerPort: 80
